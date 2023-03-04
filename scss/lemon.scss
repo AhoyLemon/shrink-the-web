@@ -1,0 +1,92 @@
+@keyframes strobeText{
+  0%{      color: #ffffff;  }
+  10%{     color: #00C3EF;  }
+  20%{     color: #0070F6;  }
+  30%{     color: #1AD688;  }
+  40%{     color: #ED131E;  }
+  50%{     color: #FFC600;  }
+  60%{     color: #FF7500;  }
+  70%{     color: #990FFF;  }
+  80%{     color: #FF76D5;  }
+  90%{     color: #C40172;  }
+  100%{    color: #ffffff;  }
+}
+
+@keyframes blinkingText {
+  0% { opacity:1 }
+  40%{ opacity:1; }
+  41%{ opacity:0; }
+  70%{ opacity:0; }
+  71%{ opacity:1; }
+}
+
+
+
+.reveal {
+  h1, h2, h3 { text-transform: none; }
+
+  h2.shadowed { text-shadow: 1px 1px 0 black, -1px -1px 0 black, 4px 4px 0 rgba(0,0,0,0.5); }
+
+  h1, h2, h3, h4 {
+    &.black { color: #212121; text-shadow: 2px 2px 2px white, 4px 4px 2px rgba(0,0,0,0.5); }
+    &.dark-blue { color: #221c35; text-shadow: 2px 2px 2px white, 4px 4px 6px rgba(0,0,0,0.5); }
+  }
+  section {
+    img { margin: 0; background:transparent; border:none; box-shadow:none; max-height: 65vh; }
+  }
+  img { background:none; }
+  a {
+    &:hover {
+      img { background:transparent; box-shadow: none; }
+    }
+  }
+
+  .overflow-scroll { overflow-y:auto; max-height:50vh; }
+  sub { font-size:70%; }
+  .shadowed { text-shadow: 3px 3px 3px rgba(0,0,0,0.5), -1px 1px 1px rgba(0,0,0,0.95);;}
+  .black { color:#212121; }
+
+  .over-photo { background:rgba(0,0,0,0.5); backdrop-filter: blur(4px); padding:1.5rem; }
+
+  .grid { display: grid; grid-gap: 4vh;
+    img { display: block; max-width: 100%; margin-left: auto; margin-right: auto; }
+    &[columns="2"] { grid-template-columns: repeat(2,1fr); }
+    &[columns="3"] { grid-template-columns: repeat(3,1fr); }
+    &[columns="4"] { grid-template-columns: repeat(4,1fr); }
+    .box { display:flex; align-items: center; }
+  }
+  .blink {  animation:blinkingText .5s infinite; }
+  .strobe { animation-name: strobeText; animation-duration: 2.25s; animation-iteration-count: infinite; animation-timing-function: linear; }
+
+  blockquote { text-align: left; padding-left: 1.5em; padding-right: 1.25em; border-left: 0.2em solid #ccc; font-size:2rem; padding-bottom: 0.5em; position: relative; width: 100%; box-sizing: border-box;
+    &:before { content:'“'; font-size:300%; line-height: 30%; position: absolute; top:0.4em; left:0; font-family: sans-serif; }
+    cite { text-align: left; display: block;
+      &:before { content: '—'; padding-left: 2em; padding-right: 0.5em; }
+    }
+  }
+
+  pre.huge { font-size:clamp(2rem,3.25vw,44px); }
+
+  kbd { background-color: #eee; border-radius: 0.15em; border: 0.05em solid #b4b4b4; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset; color: #333; display: inline-block; font-size: 0.85em; line-height: 1; padding: 0.25em 0.5em; white-space: nowrap; text-shadow: none; }
+
+  .source { position:fixed; bottom:15px; left:0; background:rgba(0,0,0,0.65); backdrop-filter: blur(4px); font-size: 18px; font-family: monospace; color:white; font-style: normal; padding:0.75em 1.25em; transform:translate(-140px,12px);
+    a { color:yellow;
+      &:hover { text-decoration: underline; }
+    }
+    opacity: 0; transition: opacity 0.5s linear;
+  } 
+
+
+  // Styles that need to _only_ happen for the present slide....
+  section.present {
+    > .source { opacity: 1; transition-delay: 1s; }
+  }
+
+}
+
+.example { height:60vh; overflow-y: scroll; position:relative;
+  .inner { background:white; height:300vh;  }
+  .position-fixed { background: red; width:200px; height:200px; position: absolute; top:0; left:0; }
+}
+
+.bottom-center { background-position:center bottom 28% !important; }

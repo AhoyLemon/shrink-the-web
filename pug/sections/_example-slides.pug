@@ -1,0 +1,238 @@
+section#BasicContentTypes
+
+  section
+    h1 Headline 1
+    h2 Headline 2
+    h3 Headline 3
+    h4 Headline 4
+
+  section
+    ul
+      li Unordered List
+      li With several bullet points
+      li of different length
+      li including this one, which is way too long because I didn't know when to stop typing
+
+  section
+    ol
+      li Ordered List
+      li with more bullet points
+      li but this one is shorter.
+  
+  section
+    blockquote
+      p I don't have no trouble with you fucking me #[br] but I have a little problem with you #[em not] fucking me.
+      cite Ol' Dirty Bastard
+
+  section
+    +image("https://picsum.photos/1920/1080?1") 
+      | image caption
+
+
+  section(data-background="https://picsum.photos/1920/1080?2")
+    .over-photo
+      h4 This slide has a background image.
+      p I gave this div some background for legibilty.
+
+  section
+    code Lorem Khaled Ipsum is a 
+      span.blink major key to success
+      | . Congratulations, you played yourself. Learning is cool, but knowing is better, and I know the key to success. The key is to 
+      span.strob drink coconut
+      | , fresh coconut, trust me. They never said winning was easy. Some people can’t handle success, I can. To succeed you must believe. When you believe, you will succeed. Surround yourself with 
+      span.strobe angels
+      | . To succeed you must believe. When you believe, you will succeed.
+
+  section
+    h4.r-fit-text This slide has text that's fucking
+    h1.r-fit-text HUGE
+
+  section
+    h3 This slide has notes.
+    h3 Hit the #[kbd S] key
+    aside.notes
+      h2 You found my notes!
+      p That's great.
+      ul
+        li put whatever
+        li arbitrary
+        li markup you want in here.
+
+section#Grids
+
+  section
+    h4 Let's do some grids...
+    .grid(columns="4")
+      .box
+        img(src="https://picsum.photos/400/400?1")
+      .box
+        img(src="https://picsum.photos/400/400?2")
+      .box
+        img(src="https://picsum.photos/400/400?3")
+      .box
+        img(src="https://picsum.photos/400/400?4")
+
+  section
+    h4 ...with transitions
+    .grid(columns="3")
+      .box
+        img(src="https://picsum.photos/400/400?5")
+      .box.fragment
+        img(src="https://picsum.photos/400/400?6")
+      .box.fragment
+        img(src="https://picsum.photos/400/400?7")
+    .grid.fragment(columns="2" style="margin-top:40px;")
+      .box
+        img(src="https://picsum.photos/600/200?8")
+      .box
+        img(src="https://picsum.photos/600/200?9")
+
+  section
+    h4 I'll be honest, I have no idea why you would do this, but...
+    .r-stack
+      img.fragment(src="https://picsum.photos/800/500?20")
+      img.fragment(src="https://picsum.photos/700/500?21")
+      img.fragment(src="https://picsum.photos/900/500?22")
+
+section#CodeBlocks
+
+  section
+    h4 HTML
+    pre
+      code.html(data-trim data-line-numbers).
+        <section class="my-thing">
+          <figure class="image-wrapper">
+            <picture>
+              <source srcset="https://picsum.photos/600/200?10" media="(min-width:769px)">
+              <source srcset="https://picsum.photos/600/200?11" media="(max-width:768px)">
+              <img src="https://picsum.photos/600/200?10" alt="Hello, this is an alt.">
+            </picture>
+          </figure>
+        </section>
+    h4 CSS
+    pre
+      code.css(data-trim data-line-numbers).
+        section {
+          &.my-thing { font-family: $serif; }
+          .image-wrapper { width: 100%; }
+        }
+
+  section
+    h4 Javascript, but huge.
+    pre.huge
+      code.huge.js(data-trim data-line-numbers).
+        function foo(bar) {
+          bar += 1;
+          return bar;
+        }
+    p.fragment There's stuff on animating code blocks 
+      a(href="#AutoAnimateCode") later on
+      | .
+
+section#Backgrounds
+  section(data-background-color="rebeccapurple")
+    h2 Okay, so let's change the background color...
+  section#BackgroundGradients(data-background-gradient="linear-gradient(to bottom, #f953c6, #b91d73)")
+    h2 and then try a background gradient...
+  section(data-background-gradient="linear-gradient(to bottom, #b91d73, #7303c0, #03001e)")
+    h2 ...which transitions to a different one...
+  section(data-background-image="https://picsum.photos/1920/1080?6")
+    h2 ...before switching to an image...
+  section(data-background-image="https://picsum.photos/768/1080?7" data-background-size="contain")
+    h2 ...or maybe another one.
+  section(data-background-video="video/blue-27239.mp4" data-background-video-loop)
+    h2 ...or maybe a video.
+
+section#MediaTypes
+  section
+    h4 Video, autoplay, muted, controls
+    video(autoplay src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" muted controls)
+  section
+    h4 Now let's try that with YouTube
+    iframe(width="600" height="450" src="https://www.youtube.com/embed/dJrYZKjT8cQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen)
+  +videoBG('xQS6Y8Xr92c')
+    .source
+      strong This is a YouTube video 
+      a(href="https://youtu.be/xQS6Y8Xr92c") Face Yoga Battle
+  section(data-background-iframe="https://ahoylemon.xyz")
+    .source
+      strong SOURCE:
+      +link("https://ahoylemon.xyz") ahoylemon.xyz
+      //- a(href="https://ahoylemon.xyz") ahoylemon.xyz
+
+section#AutoAnimate
+  section(data-auto-animate)
+    h2 Automatically
+  section(data-auto-animate)
+    h2 Automatically
+    h1 Animate
+  section(data-auto-animate)
+    h2 Automatically
+    h1 Animate
+    p (by adding #[code data-auto-animate] to #[code section]s)
+    
+  section#ThreeBoxes(data-auto-animate)
+    .grid(columns="3")
+      .box(data-id="RedBox" style="background:#d11; height:15vw;")
+      .box(data-id="GreenBox" style="background:#0c0; height:15vw;")
+      .box(data-id="BlueBox" style="background:#11d; height:15vw;")
+  section(data-auto-animate)
+    .grid(columns="3")
+      .box(data-id="RedBox" style="background:#f22; height:15vw; border-radius:50%;")
+      .box(data-id="GreenBox" style="background:#2f2; height:15vw;  border-radius:50%;")
+      .box(data-id="BlueBox" style="background:#44f; height:15vw;  border-radius:50%;")
+    br
+    br
+    h4 If you're doing CSS things, these #[code data-id] attributes are necessary.
+
+  section#AutoAnimateCode(data-auto-animate)
+    h4 Now let's do that with code...
+    pre(data-id="code")
+      code(data-line-numbers class="hljs" data-trim).
+        import React, { useState } from 'react';
+
+        function Example() {
+          const [count, setCount] = useState(0);
+
+          return (
+            ...
+          );
+        }
+  section(data-auto-animate)
+    h4 Like so...
+    pre(data-id="code")
+      code(data-line-numbers class="hljs" data-trim).
+        function Example() {
+          const [count, setCount] = useState(0);
+
+          return (
+            &lt;div&gt;
+              &lt;p&gt;You clicked {count} times&lt;/p&gt;
+              &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+                Click me
+              &lt;/button&gt;
+            &lt;/div&gt;
+          );
+        }
+  section
+    h4 Hey, do you want to see those gradients again?
+    a(href="#/BackgroundGradients") Because this link goes there.
+
+section#SlideTranstions
+  section
+    h4 and now finally, some slide transitions...
+
+  section(data-transition="zoom")
+    h1 Like this zoom one.
+  
+  section(data-transition="convex")
+    h2 and this convex one.
+  section(data-transition="concave")
+    h2 and this concave one.
+  section(data-transition="fade")
+    h2 And this fade one
+  section(data-transition="fade-in zoom-out")
+    h2 And this one that fades in, but zooms out
+  section
+    h2 and then back to normal.
+    p.fragment (Before going to the last frame...)

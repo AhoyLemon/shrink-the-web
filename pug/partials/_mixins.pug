@@ -1,0 +1,23 @@
+mixin link(url)
+  a(href=url target="_blank")
+    span
+      block
+
+mixin image(file)
+  figure
+    - let imgSrc
+    if file.includes("http")
+      - imgSrc = file
+    else
+      - imgSrc = "/img/"+file
+    img(src=imgSrc)
+    if block
+      figcaption
+        block
+
+
+mixin videoBG(slug,start)
+  if !start
+    - start = 0
+  section(data-background-iframe="https://www.youtube.com/embed/"+slug+"?start="+start+"&fs=0&showinfo=0&rel=0&modestbranding=1&autohide=1&showinfo=0&disablekb=1" data-background-interactive)
+    block

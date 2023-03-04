@@ -1,0 +1,297 @@
+@charset "UTF-8";
+@-webkit-keyframes strobeText {
+  0% {
+    color: #ffffff;
+  }
+  10% {
+    color: #00C3EF;
+  }
+  20% {
+    color: #0070F6;
+  }
+  30% {
+    color: #1AD688;
+  }
+  40% {
+    color: #ED131E;
+  }
+  50% {
+    color: #FFC600;
+  }
+  60% {
+    color: #FF7500;
+  }
+  70% {
+    color: #990FFF;
+  }
+  80% {
+    color: #FF76D5;
+  }
+  90% {
+    color: #C40172;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+@keyframes strobeText {
+  0% {
+    color: #ffffff;
+  }
+  10% {
+    color: #00C3EF;
+  }
+  20% {
+    color: #0070F6;
+  }
+  30% {
+    color: #1AD688;
+  }
+  40% {
+    color: #ED131E;
+  }
+  50% {
+    color: #FFC600;
+  }
+  60% {
+    color: #FF7500;
+  }
+  70% {
+    color: #990FFF;
+  }
+  80% {
+    color: #FF76D5;
+  }
+  90% {
+    color: #C40172;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+@-webkit-keyframes blinkingText {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  41% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  71% {
+    opacity: 1;
+  }
+}
+@keyframes blinkingText {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  41% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  71% {
+    opacity: 1;
+  }
+}
+.reveal h1, .reveal h2, .reveal h3 {
+  text-transform: none;
+}
+.reveal h2.shadowed {
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.reveal h1.black, .reveal h2.black, .reveal h3.black, .reveal h4.black {
+  color: #212121;
+  text-shadow: 2px 2px 2px white, 4px 4px 2px rgba(0, 0, 0, 0.5);
+}
+.reveal h1.dark-blue, .reveal h2.dark-blue, .reveal h3.dark-blue, .reveal h4.dark-blue {
+  color: #221c35;
+  text-shadow: 2px 2px 2px white, 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+.reveal section img {
+  margin: 0;
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  max-height: 65vh;
+}
+.reveal img {
+  background: none;
+}
+.reveal a:hover img {
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.reveal .overflow-scroll {
+  overflow-y: auto;
+  max-height: 50vh;
+}
+.reveal sub {
+  font-size: 70%;
+}
+.reveal .shadowed {
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.95);
+}
+.reveal .black {
+  color: #212121;
+}
+.reveal .over-photo {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  padding: 1.5rem;
+}
+.reveal .grid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 4vh;
+}
+.reveal .grid img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reveal .grid[columns="2"] {
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+.reveal .grid[columns="3"] {
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+}
+.reveal .grid[columns="4"] {
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+.reveal .grid .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reveal .blink {
+  -webkit-animation: blinkingText 0.5s infinite;
+          animation: blinkingText 0.5s infinite;
+}
+.reveal .strobe {
+  -webkit-animation-name: strobeText;
+          animation-name: strobeText;
+  -webkit-animation-duration: 2.25s;
+          animation-duration: 2.25s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.reveal blockquote {
+  text-align: left;
+  padding-left: 1.5em;
+  padding-right: 1.25em;
+  border-left: 0.2em solid #ccc;
+  font-size: 2rem;
+  padding-bottom: 0.5em;
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.reveal blockquote:before {
+  content: "“";
+  font-size: 300%;
+  line-height: 30%;
+  position: absolute;
+  top: 0.4em;
+  left: 0;
+  font-family: sans-serif;
+}
+.reveal blockquote cite {
+  text-align: left;
+  display: block;
+}
+.reveal blockquote cite:before {
+  content: "—";
+  padding-left: 2em;
+  padding-right: 0.5em;
+}
+.reveal pre.huge {
+  font-size: clamp(2rem, 3.25vw, 44px);
+}
+.reveal kbd {
+  background-color: #eee;
+  border-radius: 0.15em;
+  border: 0.05em solid #b4b4b4;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: 0.85em;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  white-space: nowrap;
+  text-shadow: none;
+}
+.reveal .source {
+  position: fixed;
+  bottom: 15px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  font-size: 18px;
+  font-family: monospace;
+  color: white;
+  font-style: normal;
+  padding: 0.75em 1.25em;
+  -webkit-transform: translate(-140px, 12px);
+          transform: translate(-140px, 12px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+.reveal .source a {
+  color: yellow;
+}
+.reveal .source a:hover {
+  text-decoration: underline;
+}
+.reveal section.present > .source {
+  opacity: 1;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.example {
+  height: 60vh;
+  overflow-y: scroll;
+  position: relative;
+}
+.example .inner {
+  background: white;
+  height: 300vh;
+}
+.example .position-fixed {
+  background: red;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bottom-center {
+  background-position: center bottom 28% !important;
+}

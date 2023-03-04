@@ -1,0 +1,21 @@
+- const talkTitle = "[LEMON TALK TEMPLATE]"
+doctype html
+head
+  include partials/_head.pug
+body  
+  include partials/_mixins.pug
+
+  .reveal
+    .slides
+
+      // Video Screens
+      include sections/_intros.pug
+      
+      // Personal Intro
+      include sections/_hello.pug
+
+      include sections/_example-slides.pug
+
+      include sections/_thank-you.pug
+  
+    include partials/_javascripts.pug
