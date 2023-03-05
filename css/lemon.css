@@ -155,7 +155,7 @@
 .reveal .grid {
   display: -ms-grid;
   display: grid;
-  grid-gap: 4vh;
+  grid-gap: clamp(10px, 4vw, 30px);
 }
 .reveal .grid img {
   display: block;
@@ -182,6 +182,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.reveal table {
+  width: 100%;
+}
+.reveal table.small {
+  font-size: 1.25rem;
+}
+.reveal table tr.highlight td {
+  background: white;
+  color: black;
 }
 .reveal .blink {
   -webkit-animation: blinkingText 0.5s infinite;

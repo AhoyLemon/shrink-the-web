@@ -1,0 +1,275 @@
+section
+  section(data-background-iframe="charts/2.html" data-preload="false")
+
+    cite.source
+      strong Source: 
+      a(href="https://httparchive.org/reports/page-weight")
+        | HTTP Archive
+    aside(class="notes" data-markdown).
+      This is a problem that has been talked about, but has continued completely unabated
+
+  section(data-background-image="img/bg/moore-lebowski.jpg")
+    h2.white.shadowed(style="margin-top:40vh;") What about Moore's Law?
+
+  section
+
+    h3 Broadband speeds, 2015
+    img(src="img/charts/speedmap-2015.png")
+
+    cite.source
+      strong Source:
+      a(href="https://www.fastmetrics.com/internet-connection-speed-by-country.php") Fastmetrics
+
+  section
+
+    h3 Broadband speeds, 2022
+    img(src="img/charts/speedmap-2019.png")
+
+    cite.source
+      strong Source:
+      a(href="https://infogram.com/speed-test-2019-1ho16vdprqzx6nq") cable.co.uk
+
+  section
+
+    // NORWAY TABLE
+    table
+      caption 
+        +link("https://www.speedtest.net/global-index#fixed")
+          | Speedtest Index, Broadband
+      thead
+        tr
+          th #
+          th Country
+          th ⇣ Mb/s
+      tbody
+        tr
+          td #1
+          td Singapore
+          td 219.01
+        tr
+          td #2
+          td Chile
+          td 211.43
+        tr
+          td #6
+          td United States
+          td 167.36
+        tr.highlight
+          td #26
+          td Norway
+          td 100.89
+        tr
+          td #41
+          td Belgium
+          td 83.63
+        tr
+          td #48
+          td Germany
+          td 75.09
+        tr
+          td #104
+          td Croatia
+          td 31.09
+        tr
+          td #181
+          td Cuba
+          td 1.92
+
+    .source
+      span Source:
+      +link("https://www.speedtest.net/global-index#fixed") Ookla
+
+  section
+
+    // NORWAY TABLE
+    table(style="width:100%;")
+      caption 
+        a(href="https://www.speedtest.net/global-index#mobile") 
+          | Speedtest Index, Mobile
+      thead
+        tr
+          th #
+          th Country
+          th ⇣ Mb/s
+      tbody
+        tr.highlight
+          td #1
+          td Norway
+          td 122.77
+        tr
+          td #2
+          td United Arab Emirates
+          td 118.42
+        tr
+          td #9
+          td China
+          td 92.53
+        tr
+          td #17
+          td Finland
+          td 70.29
+        tr
+          td #24
+          td United States
+          td 61.95
+        tr
+          td #39
+          td Latvia
+          td 43.19
+        tr
+          td #73
+          td Ireland
+          td 26.21
+        tr
+          td #117
+          td India
+          td 13.52
+        tr
+          td #140
+          td Cuba
+          td 4.15
+
+  section
+
+    // NORWAY TABLE
+    table(style="width:100%;")
+      caption 
+        a(href="https://www.cable.co.uk/mobiles/worldwide-data-pricing/") 
+          | Cost Of 1Gb In Mobile Data
+      thead
+        tr
+          th #
+          th Country
+          th 1 Gb
+      tbody
+        tr
+          td #1
+          td Israel
+          td 0.5 NOK
+        tr
+          td #4
+          td Italy
+          td 3 NOK
+        tr
+          td #37
+          td Denmark
+          td 8.5 NOK
+        tr
+          td #68
+          td Spain
+          td 13 NOK
+        //- tr
+        //-   td #110
+        //-   td Bahrain
+        //-   td 23 NOK
+        tr
+          td #121
+          td Hong Kong
+          td 25 NOK
+        tr
+          td #154
+          td United States
+          td 36 NOK
+        //-tr
+          td #190
+          td Canada
+          td 62 NOK
+        tr.highlight
+          td #191
+          td Norway
+          td 63 NOK
+        tr
+          td #229
+          td Falkland Islands
+          td 481 NOK
+
+    // UK TABLE
+    //-table(style="width:100%;")
+      caption 
+        a(href="https://www.cable.co.uk/mobiles/worldwide-data-pricing/") 
+          | Cost Of 1GB In Mobile Data
+      thead
+        tr
+          th #
+          th Country
+          th 1 Gb
+      tbody
+        tr
+          td #1
+          td India
+          td £0.20
+        tr
+          td #37
+          td Romania
+          td £1.42
+        tr
+          td #62
+          td France
+          td £2.25
+        tr
+          td #79
+          td Sweden
+          td £2.76
+        tr.highlight
+          td #136
+          td United Kingdom
+          td £5.02
+        tr
+          td #153
+          td Germany
+          td £6.02
+        tr
+          td #182
+          td United States
+          td £9.32
+        tr
+          td #224
+          td Greece
+          td £24.65
+    
+    .source
+      span Source:
+      +link("https://www.cable.co.uk/mobiles/worldwide-data-pricing/") cable.co.uk
+
+  // Cell Phone, download DOOM
+  section(data-preload="false")
+    table
+      thead
+        tr
+          th Connection
+          th(colspan="2") Download 3 megs
+      tbody
+        tr
+          td 2G
+          td 2 minutes
+          td
+            img(src="img/charts/download-2m.gif")
+        tr
+          td 3G
+          td 10 seconds
+          td
+            img(src="img/charts/download-10s.gif")
+        tr
+          td 3G+
+          td 6 seconds
+          td
+            img(src="img/charts/download-6s.gif")
+        tr
+          td 4G
+          td 2 seconds 
+          td
+            img(src="img/charts/download-2s.gif")
+
+  section(data-background-iframe="charts/3.html" data-preload="false")
+    cite.source
+      strong Source: 
+      a(href="https://royal.pingdom.com/page-load-time-really-affect-bounce-rate/")
+        | Pingdom
+
+  section
+    iframe(data-src="charts/timer.html" data-preload="false" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+    aside.notes
+      h2 30-40 seconds
+      p Because time is real. It's experiential, but unmutable.
+      p If I'm good in this presentation today, then hopefully our experience together will feel fast.
+      p But if you find me boring or uninformative, everything's going to feel a whole lot slower. You might be looking at the clock.

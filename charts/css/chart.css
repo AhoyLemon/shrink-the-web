@@ -1,0 +1,32 @@
+.top-right-button-holder {
+  position: absolute;
+  top: 30px;
+  right: 30px; }
+
+button {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  padding: 0.32em 1em;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  cursor: pointer; }
+  button:hover, button:focus {
+    background: white; }
+  button:active {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8); }
+
+.source {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  font-family: monospace;
+  color: white;
+  font-style: normal;
+  padding: 1em; }
+  .source a {
+    color: yellow; }

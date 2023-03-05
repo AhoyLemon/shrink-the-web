@@ -1,0 +1,83 @@
+section
+
+  section(data-background-iframe="charts/1.html" data-background-interactive)
+
+  section
+    h2 Text Compression
+    p (HTML, CSS & JS)
+  
+  section
+    p Triage:
+    ol
+      li Server-Side Compression
+      li Bundle & Minify
+      li Consider CDNs
+  
+  section
+    h2 1. GZIP
+
+  section
+    h4 How does GZIP Work?
+    //-p.fragment Simple.
+    div(style="margin-top:60px").fragment
+      h2 H = 
+        span(style="transform:scale(2); display:inline-block; margin-right:0.25em;") Σ
+        |  p(x) log
+        sub 2
+        |  p(x)
+    .source.fragment
+      strong Source: 
+      a(href="https://www.youtube.com/watch?v=wLx5OGxOYUc") Raul Fraile @ JSConf EU 2014
+
+  section
+    p 
+      strong TLDR: 
+      span Less bits over the wire.
+    p Turn GZIP on.
+
+  section
+    h2 2. bundling & minifying
+
+  section
+    h3 Why bundle?
+    code.fragment(style="font-size:180%")
+      | 100k < (10 * 10k)
+  
+  section
+    h3 Why minify?
+    .fragment
+      code(style="font-size:180%")
+        | moment.js = 148k
+    .fragment
+      code(style="font-size:180%")
+        | moment.min.js = 51k
+      
+  
+  section
+    h3 How?
+    p.fragment That super depends.
+
+  section
+    a(href="https://prepros.io" target="_blank")
+      img(src="img/logos/prepros.png")
+      p prepros.io
+
+  section
+    h2 3. CDNs
+    p like:
+    ul
+      li cdnjs
+      li jsdelivr
+      li Google Hosted Libraries
+      li etc.
+
+
+  section
+    h3 Why serve some files from a shared CDN?
+    ul.fragment
+      li The CDN is probably(?) faster than your servers.
+      li Your users already have jQuery
+
+  
+  
+  

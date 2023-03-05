@@ -1,0 +1,84 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    //-link(rel="stylesheet" href="css/chart.css")
+    title HELLO
+
+    style.
+      body, html { margin:0; padding:0; }
+      .timer-holder { height:100vh; color:white; text-align:center; display:flex; font-family:'Orbitron', sans-serif; }
+      .timer-holder .inside { width:100%; }
+      .timer-holder time { display:block; font-size:30vw; font-family: 'Inconsolata', monospace; font-weight:900; }
+      .timer-holder .value { display:block; font-size:10vw; text-align:left; }
+
+  body
+    
+    
+    
+    //-script(src="js/libraries/chart.min.js")
+    //-script(src="js/libraries/chart-piechart-outlabels.js")
+
+    #app
+      .timer-holder(v-bind:style="{ background: backgroundColor }")
+        .inside 
+          time(v-text="secondsPassed.toFixed(2)" v-bind:style="{ color: textColor }")
+
+    script(src="js/libraries/vue.min.js")
+    script.
+      var app = new Vue({
+        el: '#app',
+        data: {
+          secondsPassed: 0
+        },
+        methods: {
+          startTimer() {
+            let self = this;
+            setInterval(function(){
+              self.secondsPassed = self.secondsPassed + 0.01;
+            }, 10);
+          }
+        },
+        computed: {
+          textColor() {
+            if (this.secondsPassed < 15) {
+              let hint = 10 * this.secondsPassed;
+              if (hint > 160) {
+                hint = 160
+              }
+              
+              h = Math.floor((160 - hint));
+              
+              //return 'hsla('+ (160 - h)+', 100%,75%,1)';
+              return 'hsla('+h+',100%,75%,1)';
+            } else {
+              return 'hsla(0,100%,75%,1)';
+            }
+          },
+          backgroundColor() {
+            if (this.secondsPassed < 15) {
+              return 'hsla(0, 0%, 0%, 1)';
+            } else {
+              let sint = ((this.secondsPassed - 15) * 5);
+              if (sint > 100) {
+                sint = 100;
+              }
+              let s = '' + Math.floor(sint) + '%'
+              
+              let lint = ((this.secondsPassed - 15) * 3);
+              if (lint > 75) {
+                lint = 75
+              }
+              let l = '' + Math.floor(lint) + '%'
+              return 'hsla(0 ,'+s+', '+l+', 1)';
+            }
+          }
+        },
+        mounted: function() {
+          this.startTimer();
+        },
+        
+      });
+
+      

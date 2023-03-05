@@ -48,13 +48,23 @@
 
   .over-photo { background:rgba(0,0,0,0.5); backdrop-filter: blur(4px); padding:1.5rem; }
 
-  .grid { display: grid; grid-gap: 4vh;
+  // Grid-layouts
+  .grid { display: grid; grid-gap: clamp(10px,4vw,30px);
     img { display: block; max-width: 100%; margin-left: auto; margin-right: auto; }
     &[columns="2"] { grid-template-columns: repeat(2,1fr); }
     &[columns="3"] { grid-template-columns: repeat(3,1fr); }
     &[columns="4"] { grid-template-columns: repeat(4,1fr); }
     .box { display:flex; align-items: center; }
   }
+
+  // Table with row highlights
+  table { width:100%;
+    &.small { font-size:1.25rem; }
+    tr.highlight {
+      td { background:white; color: black; }
+    }
+  }
+
   .blink {  animation:blinkingText .5s infinite; }
   .strobe { animation-name: strobeText; animation-duration: 2.25s; animation-iteration-count: infinite; animation-timing-function: linear; }
 
