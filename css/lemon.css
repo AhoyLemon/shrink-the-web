@@ -186,12 +186,26 @@
 .reveal table {
   width: 100%;
 }
-.reveal table.small {
-  font-size: 1.25rem;
+.reveal table caption {
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.reveal table th {
+  font-size: 80%;
+  font-weight: 700;
+}
+.reveal table th.small, .reveal table td.small {
+  font-size: 60%;
+  vertical-align: top;
+  padding-bottom: 0.5em;
 }
 .reveal table tr.highlight td {
   background: white;
   color: black;
+}
+.reveal table .no-line {
+  border: none;
 }
 .reveal .blink {
   -webkit-animation: blinkingText 0.5s infinite;

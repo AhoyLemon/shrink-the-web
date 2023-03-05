@@ -57,12 +57,15 @@
     .box { display:flex; align-items: center; }
   }
 
-  // Table with row highlights
+  // Table Stylez.
   table { width:100%;
-    &.small { font-size:1.25rem; }
+    caption { font-size: 80%; text-transform: uppercase; letter-spacing: 0.1em; }
+    th { font-size:80%; font-weight: 700; }
+    th.small, td.small { font-size:60%; vertical-align: top; padding-bottom: 0.5em; }
     tr.highlight {
       td { background:white; color: black; }
     }
+    .no-line { border:none; }
   }
 
   .blink {  animation:blinkingText .5s infinite; }
