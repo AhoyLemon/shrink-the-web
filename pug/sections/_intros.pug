@@ -1,49 +1,41 @@
+-
+  const introVideos = [
+    {
+      title: "SAXONS (Germany) vs THE TRIBE (Germany)",
+      year: 2018,
+      slug: "METv5RbsdKE",
+      skipTo: 250
+    },
+    {
+      title: "POPPIN JUN & PHOENIX LIL MINI vs ZEL & TFA (CALIFORNIA)",
+      year: 2017,
+      slug: "7HJOdLUi544",
+      skipTo: 140
+    },
+    {
+      title: "THE ROYAL FAMILY (New Zealand)",
+      year: 2015,
+      slug: "BJy6sR0-MVQ",
+      skipTo: 15
+    },
+    {
+      title: "FACTORY KINGZ (Latvia)",
+      year: 2018,
+      slug: "qJ6U34VRN2Y",
+      skipTo: 25
+    },
+
+  ]
+
 section
 
-  // The Saxonz (GERMANY)
-  // vs
-  // The Tribe (GERMANY)
-  // 2018
-  +videoBG('METv5RbsdKE',250)
-    h2.white.shadowed
-      | Shrink The Web!
-    .a-talk-by(style="margin-top:43vh;")
-      b.white.shadowed
-        | (a talk by @AhoyLemon)
-
-  //- Jinjo Crew (KOREA)
-  //- vs
-  //- Squadron (United States)
-  //-+videoBG('YPF_P7oTasI',122)
-    h2.white.shadowed
-      | Shrink The Web!
-    .a-talk-by(style="margin-top:50vh;")
-      b.white.shadowed
-        | (a talk by @AhoyLemon)
-  
-  // Poppin Jun & Phoenix lil'Mini
-  /// vs. 
-  // Zel & T.F.A
-  // 2017
-  +videoBG('7HJOdLUi544',140)
-    h2.white.shadowed
-      | Shrink The Web!
-    .a-talk-by(style="margin-top:43vh;")
-      b.white.shadowed
-        | (a talk by @AhoyLemon)
-
-  // The Royal Family (New Zealand)
-  // 2015
-  //-+videoBG('BJy6sR0-MVQ',15)
-    h2.white.shadowed
-      | Shrink The Web!
-    .a-talk-by(style="margin-top:43vh;")
-      b.white.shadowed
-        | (a talk by @AhoyLemon)
-
-  +videoBG('qJ6U34VRN2Y',25)
+  for video in introVideos
+    +videoBG(video.slug, video.skipTo)
       h2.white.shadowed
         | Shrink The Web!
       .a-talk-by(style="margin-top:43vh;")
         b.white.shadowed
           | (a talk by @AhoyLemon)
+      aside.notes
+        h2= video.title
+        p= video.year
