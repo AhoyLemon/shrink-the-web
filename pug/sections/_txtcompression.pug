@@ -16,10 +16,13 @@ section
   section
     h2 1. GZIP
 
-  section
+  section(data-auto-animate)
+    h4 How does GZIP Work?
+
+  section(data-auto-animate)
     h4 How does GZIP Work?
     //-p.fragment Simple.
-    div(style="margin-top:60px").fragment
+    div(style="margin-top:60px")
       h2 H = 
         span(style="transform:scale(2); display:inline-block; margin-right:0.25em;") Σ
         |  p(x) log
@@ -42,6 +45,13 @@ section
     h3 Why bundle?
     code.fragment(style="font-size:180%")
       | 100k < (10 * 10k)
+
+    .fragment(style="padding-top:2em; line-height:0.6em; text-align:left;")
+      br
+      sub
+        strong(style="line-height:1.2;") If you found yourself thinking "Well, actually..."
+        br
+        span This is definitely #[em less] true on modern webservers with HTTP/2 multiplexing where requests are subdivided by origin, however when you factor in GZIP compression from the previous point the results can still be dramatic, as each of those 10 files would need to be compressed & decompressed individually, which would be less efficient overall.
   
   section
     h3 Why minify?

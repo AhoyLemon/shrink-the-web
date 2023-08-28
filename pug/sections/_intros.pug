@@ -1,41 +1,83 @@
--
-  const introVideos = [
-    {
-      title: "SAXONS (Germany) vs THE TRIBE (Germany)",
-      year: 2018,
-      slug: "METv5RbsdKE",
-      skipTo: 250
-    },
-    {
-      title: "POPPIN JUN & PHOENIX LIL MINI vs ZEL & TFA (CALIFORNIA)",
-      year: 2017,
-      slug: "7HJOdLUi544",
-      skipTo: 140
-    },
-    {
-      title: "THE ROYAL FAMILY (New Zealand)",
-      year: 2015,
-      slug: "BJy6sR0-MVQ",
-      skipTo: 15
-    },
-    {
-      title: "FACTORY KINGZ (Latvia)",
-      year: 2018,
-      slug: "qJ6U34VRN2Y",
-      skipTo: 25
-    },
-
-  ]
-
 section
 
-  for video in introVideos
-    +videoBG(video.slug, video.skipTo)
-      h2.white.shadowed
-        | Shrink The Web!
-      .a-talk-by(style="margin-top:43vh;")
-        b.white.shadowed
-          | (a talk by @AhoyLemon)
-      aside.notes
-        h2= video.title
-        p= video.year
+  // Fantastik Armada (France) vs GAMBLER (Korea)
+  +introScreen('EzglYPf7Ylk',220)
+    aside.notes
+      h2 BATTLE OF THE YEAR 2004
+      p Fantastik Armada (France)
+      p vs
+      p GAMBLER (Korea)
+
+  // Flooriorz (Japan) vs Tie Break (France)
+  +introScreen('hbqCRGDwcHQ',2400)
+    aside.notes
+      h2 BATTLE OF THE YEAR 2021
+      p Flooriorz (Japan)
+      p vs
+      p Tie Break (France)
+
+  // BGIRL TERRA, 2013
+  +introScreen('5HrrbkYJM2M',15) 
+    aside.notes
+      h2 BATTLE OF THE YEAR 2004
+      p Fantastik Armada (France)
+      p vs
+      p GAMBLER (Korea)
+
+  //- // Flying Steps (Germany) vs Squadron (United States)
+  //- +introScreen('yBdXfKxVpV4',52)
+  //-   aside.notes
+  //-     h2 BATTLE OF THE YEAR 2021
+  //-     p Flying Steps (Germany)
+  //-     p vs
+  //-     p Squadron (United States)
+
+  //- // STREETSTAR DANCEHALL, 2013
+  //- +introScreen('JxI-elT-6fo',8)
+  //-   aside.notes
+  //-     h2 STREETSTAR 2013
+  //-     h3 Dancehall Final
+  //-     p MVI (SWE)
+  //-     p vs
+  //-     p Enough (SWE)
+
+  //- // PHOENIX LIL'MINI
+  //- +introScreen('7HJOdLUi544',140)
+  //-   aside.notes
+  //-     h2 D-trix Lollicup Jam, 2017
+  //-     p Phoenix lil'Mini & Poppin Jun
+  //-     p vs
+  //-     p Zel & T.F.A
+
+  //- // Factory Kingz (Latvia)
+  //- +introScreen('qJ6U34VRN2Y',25)
+  //-   aside.notes
+  //-     h2 BATTLE OF THE YEAR 2018
+  //-     p Factory Kingz (Latvia)
+
+  //- // Jinjo Crew (Japan) vs The Ruggeds (Netherlands)
+  //- +introScreen('jSZ9QB5Myw4',370)
+  //-   aside.notes
+  //-     h2 BATTLE OF THE YEAR 2021
+  //-     p Jinjo Crew (Japan)
+  //-     p vs
+  //-     p The Ruggeds (Netherlands)
+  
+  //- // WHITE PEOPLE CAN'T DANCE
+  //- +introScreen('nYJyFGvnXrc', 43) 
+  //-   aside.notes
+  //-     h2 Jaja Vankova & Marie Poppins
+  //-     h2 vs Madd Chadd & Poppin John
+  //-     p 2014
+  
+  //- // Step Up Revolution, Final Dance
+  //- +introScreen('qewm7AcgQO4', 20) 
+  //-   aside.notes
+  //-     h2 Step Up Revolution
+  //-     p Final Dance
+  
+  //- // Step Up All In, Electro Dance
+  //- +introScreen('ZYZyq2bJOnA', 29) 
+  //-   aside.notes
+  //-     h2 Step Up All
+  //-     p Electro Dance
