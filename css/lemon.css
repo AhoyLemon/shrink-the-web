@@ -128,6 +128,9 @@
 .reveal img {
   background: none;
 }
+.reveal a {
+  color: #e6e924;
+}
 .reveal a:hover img {
   background: transparent;
   -webkit-box-shadow: none;
